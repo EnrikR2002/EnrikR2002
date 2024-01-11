@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @EnrikR2002
+- 👋 Hi, I’m Enrik
 - 👀 I’m interested in: Bodybuilding, Programming, and Reading.
 - 🌱 I’m currently learning: Computer Science, Fitness, Life
 - 📫 How to reach me:
