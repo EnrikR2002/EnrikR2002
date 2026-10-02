@@ -1,0 +1,1643 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="An independent, offline assessment of your natural approaches to taking action.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Conative Action Profile</title>
+  <style>
+    :root{--ink:#18352f;--muted:#5d7069;--accent:#216958;--accent-dark:#164b40;--soft:#eaf3ee;--line:#d6e2da;--paper:#fffefa;--bg:#f3f5ef;--radius:22px}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    button,input,textarea{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.42}[hidden]{display:none!important}
+    button:focus-visible,a:focus-visible,summary:focus-visible,textarea:focus-visible{outline:3px solid #be702d;outline-offset:4px}
+    .shell{width:min(100% - 40px,820px);margin:42px auto 30px}.brand{display:flex;align-items:center;gap:10px;margin-bottom:28px;font-size:12px;font-weight:750;letter-spacing:.15em;text-transform:uppercase}
+    .mark{width:26px;height:26px;display:grid;grid-template-columns:repeat(2,1fr);gap:3px}.mark i{background:var(--accent);border-radius:3px}.mark i:nth-child(2){opacity:.65}.mark i:nth-child(3){opacity:.4}
+    h1{font-size:clamp(26px,5vw,40px);line-height:1.15;letter-spacing:-.035em;margin:0 0 15px;font-weight:760}h2{font-size:clamp(22px,4vw,29px);line-height:1.35;letter-spacing:-.025em;margin:0}h3{font-size:18px;line-height:1.35;margin:0 0 8px}p{margin:0 0 18px}.subtitle{font-size:20px;color:var(--muted);max-width:610px}
+    .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:36px;margin-top:26px;box-shadow:0 8px 30px #18352f05}.instructions{font-size:17px}.small{font-size:13px;color:var(--muted)}.eyebrow{font-size:12px;letter-spacing:.13em;font-weight:750;text-transform:uppercase;color:var(--muted);margin-bottom:14px}.intro-facts{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0}.pill{font-size:13px;padding:6px 12px;border:1px solid var(--line);border-radius:30px;background:var(--bg)}
+    .button{border:1px solid transparent;border-radius:12px;padding:13px 21px;font-weight:650;min-height:50px;display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:white}.button:hover:not(:disabled){background:var(--accent-dark)}.secondary{background:transparent;border-color:var(--line);color:var(--ink)}.secondary:hover:not(:disabled){background:var(--soft)}.wide{width:100%}.actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}.actions .button{flex:1}.text-button{padding:8px 0;background:none;border:0;color:var(--muted);font-size:12px;font-weight:650;letter-spacing:.06em;text-decoration:underline;text-underline-offset:4px;min-height:44px}
+    .progress-meta{display:flex;justify-content:space-between;gap:10px;font-size:13px;font-weight:650;margin-bottom:12px}.progress-track{height:6px;border-radius:10px;background:var(--line);overflow:hidden;margin-bottom:28px}.progress-fill{height:100%;width:0;background:var(--accent);transition:width .2s ease}
+    .question-heading{margin-bottom:25px}.statement{display:flex;align-items:flex-start;gap:13px;padding:18px 19px;border-radius:14px;background:var(--bg);font-size:17px;line-height:1.55}.statement p{margin:0}.letter{display:grid;place-items:center;flex-shrink:0;width:28px;height:28px;background:white;border:1px solid var(--line);border-radius:8px;font-size:13px;font-weight:750;margin-top:1px}
+    fieldset{border:0;padding:0;margin:24px 0}legend{font-size:13px;color:var(--muted);text-align:center;width:100%;padding:0;margin-bottom:14px}.scale{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px}.choice{position:relative;cursor:pointer;text-align:center;min-width:0}.choice input{position:absolute;inset:0;opacity:0;width:100%;height:100%;margin:0;cursor:pointer;z-index:1}.choice-body{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-height:88px;border:1px solid var(--line);border-radius:12px;background:white;transition:background .12s,border-color .12s}.choice-number{font-size:23px;font-weight:650}.choice-label{font-size:11px;line-height:1.3;padding:0 3px;color:var(--muted)}.choice:hover .choice-body{border-color:var(--accent);background:var(--soft)}.choice input:checked+.choice-body{background:var(--accent);color:white;border-color:var(--accent)}.choice input:checked+.choice-body .choice-label{color:white}.choice input:focus-visible+.choice-body{outline:3px solid #be702d;outline-offset:3px}.question-actions{display:flex;justify-content:space-between;gap:14px;margin-top:30px}.question-actions .button{min-width:125px}
+    .note{margin:18px 0 0;text-align:center;font-size:12px;color:var(--muted)}.footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 20px;align-items:center;margin-top:18px}.privacy{font-size:12px;color:var(--muted);margin:18px 0 0}.save-status{font-size:12px;color:var(--muted)}
+    .profile-wrap{text-align:center;border-radius:18px;background:var(--soft);padding:25px 15px;margin:25px 0}.profile-label{font-size:12px;letter-spacing:.1em;font-weight:750;margin-bottom:15px}.profile-grid{display:grid;grid-template-columns:repeat(4,1fr);max-width:430px;margin:auto}.profile-cell{border-right:1px solid #c5d9cd}.profile-cell:last-child{border:0}.profile-number{font-size:clamp(34px,7vw,49px);line-height:1.1;font-weight:750;letter-spacing:-.04em}.profile-dimension{font-size:12px;color:var(--muted);margin-top:8px}.experimental{font-size:12px;color:var(--muted);margin:18px 0 0}.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.result-card{border:1px solid var(--line);border-radius:15px;padding:20px}.result-metrics{display:flex;justify-content:space-between;gap:8px;margin-bottom:12px;font-size:14px}.result-bar{height:6px;border-radius:8px;background:var(--line);overflow:hidden;margin:12px 0 16px}.result-bar span{height:100%;display:block;background:var(--accent)}.interpretation{font-size:14px;color:var(--muted);margin:0}.neutral{font-size:13px;color:var(--muted);margin:20px 0 0}.export-card{margin-top:22px}.export-card h2{font-size:23px;margin-bottom:9px}.export-card .small{margin-bottom:22px}.export-actions{margin-top:12px}.status{font-size:14px;min-height:22px;margin:14px 0 0;color:var(--accent-dark)}details{margin-top:20px}summary{cursor:pointer;font-size:14px;font-weight:650;padding:8px 0}textarea{display:block;width:100%;height:310px;resize:vertical;margin-top:12px;padding:14px;border:1px solid var(--line);border-radius:12px;background:white;color:var(--ink);font:12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}.results-bottom{margin-top:22px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}noscript{display:block;padding:20px;background:#fff0e0;border-radius:12px}
+    @media(max-width:600px){.shell{width:calc(100% - 28px);margin-top:24px}.brand{margin-bottom:24px}.card{padding:23px 18px;margin-top:22px;border-radius:18px}.subtitle{font-size:18px}.statement{padding:15px 13px;font-size:16px;gap:10px}.scale{gap:6px}.choice-body{min-height:86px;border-radius:10px}.choice-label{font-size:10px}.question-actions .button{min-width:0;flex:1;padding:13px 10px;font-size:14px}.result-grid{grid-template-columns:1fr}.result-card{padding:18px}.actions .button{flex-basis:100%;font-size:14px}.profile-wrap{padding:22px 10px}.profile-label{font-size:11px}.profile-dimension{font-size:11px}.footer{align-items:flex-start}.progress-meta{font-size:12px}}
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+    @media print{body{background:white}.shell{width:100%;margin:0}.brand,.footer,.privacy,.export-card,.results-bottom,#intro,#assessment{display:none!important}.card{box-shadow:none;border:0;margin:0;padding:0}.result-grid{grid-template-columns:1fr 1fr}.result-card,.profile-wrap{break-inside:avoid}button{display:none!important}}
+
+    /* Four-option MOST / LEAST selection matrix. */
+    .choice-instructions{font-size:14px;color:var(--muted);margin:0 0 16px}
+    .answer-table{width:100%;table-layout:fixed;border-collapse:separate;border-spacing:0 9px}
+    .answer-table .pick-column{width:64px}
+    .answer-table thead th{font-size:11px;font-weight:750;letter-spacing:.06em;color:var(--muted);padding:0 0 6px;text-align:center}
+    .answer-table thead .approach-header{text-align:left;padding-left:16px}
+    .answer-table tbody th,.answer-table tbody td{background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .12s}
+    .answer-table tbody th{border-left:1px solid var(--line);border-radius:13px 0 0 13px;padding:18px 14px;text-align:left;font-weight:450;font-size:16px;line-height:1.5}
+    .answer-table tbody td{padding:0;text-align:center;vertical-align:middle}
+    .answer-table tbody td:last-child{border-right:1px solid var(--line);border-radius:0 13px 13px 0}
+    .option-letter{float:left;display:grid;place-items:center;width:25px;height:25px;border:1px solid var(--line);border-radius:7px;background:white;font-size:12px;font-weight:750;margin:0 10px 0 0}
+    .option-text>span:last-child{display:block;margin-left:35px}
+    .radio-hit{position:relative;display:flex;align-items:center;justify-content:center;min-height:60px;width:100%;cursor:pointer}
+    .radio-hit input{position:absolute;inset:0;width:100%;height:100%;opacity:0;margin:0;cursor:pointer}
+    .radio-circle{display:block;width:25px;height:25px;border:2px solid #8da49a;border-radius:50%;background:white;pointer-events:none}
+    .radio-hit:hover .radio-circle{border-color:var(--accent);background:var(--soft)}
+    .radio-hit input:checked+.radio-circle{border:7px solid var(--accent)}
+    .radio-hit input:focus-visible+.radio-circle{outline:3px solid #be702d;outline-offset:4px}
+    .answer-table tr.picked-most th,.answer-table tr.picked-most td{background:#e7f1eb}
+    .answer-table tr.picked-least th,.answer-table tr.picked-least td{background:#edf0ea}
+    .selection-status{font-size:13px;color:var(--muted);min-height:21px;margin:12px 0 0}
+    .selection-count{font-size:12px;color:var(--muted);margin:0 0 12px}
+    @media(max-width:600px){.answer-table .pick-column{width:48px}.answer-table tbody th{padding:15px 10px;font-size:15px}.option-letter{float:none;margin:0 0 8px;width:23px;height:23px}.option-text>span:last-child{margin-left:0}.answer-table thead .approach-header{padding-left:10px}.answer-table thead th{font-size:10px;letter-spacing:.02em}.radio-hit{min-height:60px}.choice-instructions{font-size:13px}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <div class="brand"><span class="mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Independent assessment · v3.0</div>
+    <header><h1>CONATIVE ACTION PROFILE</h1><p class="subtitle">How do you naturally solve problems when nobody tells you how?</p></header>
+    <noscript>This assessment needs JavaScript enabled in your browser. No internet connection is needed.</noscript>
+    <section id="intro" class="card" aria-labelledby="intro-title">
+      <h2 id="intro-title" tabindex="-1">Your natural way of taking action.</h2>
+      <p class="instructions" style="margin-top:20px">Answer based on what feels most natural to you — not what you were trained to do, what your job requires, or what you think sounds better.</p>
+      <p class="small">Each question offers four valid approaches. Mark one you are <strong>MOST likely</strong> to take and a different one you are <strong>LEAST likely</strong> to take. Leave the other two unmarked. If several fit, choose the two that feel most and least natural in that situation.</p>
+      <div class="intro-facts"><span class="pill">36 questions · 2 selections each</span><span class="pill">No right or wrong answers</span><span class="pill">Works offline</span></div>
+      <button id="start" class="button wide" type="button">BEGIN ASSESSMENT <span aria-hidden="true">→</span></button>
+      <p class="small" style="margin-top:18px;margin-bottom:0">An independent assessment of four natural action approaches, with nine scenarios for each. Questions are original and scores use an experimental conversion. Not affiliated with Kolbe; not an official Kolbe result.</p>
+    </section>
+    <section id="assessment" class="card" aria-labelledby="question-title" hidden>
+      <div class="progress-meta"><span id="question-count">Question 1 of 36</span><span id="answered-count">0 answered</span></div>
+      <div id="progress" class="progress-track" role="progressbar" aria-label="Questions answered" aria-valuemin="0" aria-valuemax="36" aria-valuenow="0"><div id="progress-fill" class="progress-fill"></div></div>
+      <h2 id="question-title" class="question-heading" tabindex="-1"></h2>
+      <p class="choice-instructions" id="choice-instructions">Mark one <strong>MOST likely</strong> and one <strong>LEAST likely</strong>.</p>
+      <table class="answer-table" aria-describedby="choice-instructions question-title">
+        <caption class="sr-only">Four approaches. Choose one MOST likely and a different one LEAST likely.</caption>
+        <colgroup><col><col class="pick-column"><col class="pick-column"></colgroup>
+        <thead><tr><th scope="col" class="approach-header">APPROACH</th><th scope="col">MOST</th><th scope="col">LEAST</th></tr></thead>
+        <tbody id="option-rows"></tbody>
+      </table>
+      <p id="selection-status" class="selection-status" role="status" aria-live="polite">Choose one MOST and one LEAST.</p>
+      <div class="question-actions"><button id="previous" class="button secondary" type="button">Previous</button><button id="next" class="button" type="button" disabled>Next <span aria-hidden="true">→</span></button></div>
+      <p class="note">Two different selections are required. You can go back and change either one.</p>
+    </section>
+    <section id="results" hidden aria-labelledby="results-title">
+      <div class="card">
+        <div class="eyebrow">Your results</div><h2 id="results-title" tabindex="-1">CONATIVE PROFILE</h2>
+        <div class="profile-wrap"><div class="profile-label">ESTIMATED 4-NUMBER PROFILE</div><div id="profile" class="profile-grid"></div><p class="experimental">Experimental 1–10 conversion — not an official Kolbe result.</p></div>
+        <div id="dimension-results" class="result-grid"></div>
+        <p class="neutral">Higher and lower scores represent equally valid approaches. Each dimension combines nine paired answers; percentages show scale position, not percentiles or ability. Midrange results can reflect mixed choices or limited contrast between the two sides. The full report preserves that distinction for later analysis and calibration.</p>
+      </div>
+      <div class="card export-card"><h2>Keep your complete results.</h2><p class="small">Copy the report and send it to your friend, or paste it into ChatGPT for analysis. It includes all 72 selections, 36 adjusted responses, the four raw scores, question and option order, and the full question wording and scoring key for later analysis and calibration.</p>
+        <button id="copy" type="button" class="button wide">COPY RESULTS FOR ANALYSIS</button>
+        <div class="actions export-actions"><button id="download-report" type="button" class="button secondary">Download report (.txt)</button><button id="download-json" type="button" class="button secondary">Download data (.json)</button></div>
+        <p id="export-status" class="status" role="status" aria-live="polite"></p>
+        <details id="report-details"><summary>View or manually copy the full report</summary><label class="sr-only" for="report">Complete results report</label><textarea id="report" readonly spellcheck="false"></textarea></details>
+      </div>
+      <div class="results-bottom"><button id="review" type="button" class="button secondary wide">Review / change answers</button></div>
+    </section>
+    <div class="footer"><span id="save-status" class="save-status" role="status"></span><button id="reset" class="text-button" type="button">RESET TEST</button></div>
+    <p class="privacy">Your responses remain on this device and are not transmitted anywhere.</p>
+  </main>
+  <script>
+'use strict';
+// The original item bank is embedded at build time. The delivered HTML has no dependencies.
+const VERSION = '3.0';
+const FORMAT = 'within-dimension-four-option-most-least';
+const STORAGE_KEY = 'conative-action-profile-v3.0';
+const SCORING_VERSION = 'paired-directional-contrast-1.0';
+const DIMENSIONS = ['FF','FT','QS','IM'];
+const NAMES = {FF:'Fact Finder',FT:'Follow Thru',QS:'Quick Start',IM:'Implementor'};
+const QUESTIONS = [
+  {
+    "id": "FF01",
+    "dimension": "FF",
+    "direction": "normal",
+    "facet": "learning",
+    "prompt": "When I begin learning about an unfamiliar topic, I naturally…",
+    "options": [
+      {
+        "id": "FF01_A",
+        "dimension": "FF",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Start with an overview that captures the main idea."
+      },
+      {
+        "id": "FF01_B",
+        "dimension": "FF",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Find the few key points I can put to use."
+      },
+      {
+        "id": "FF01_C",
+        "dimension": "FF",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Explore examples and distinctions to understand the topic precisely."
+      },
+      {
+        "id": "FF01_D",
+        "dimension": "FF",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Work through definitions and background to establish a detailed understanding."
+      }
+    ]
+  },
+  {
+    "id": "FF02",
+    "dimension": "FF",
+    "direction": "reverse",
+    "facet": "decision making",
+    "prompt": "When choosing between two reasonable options, I naturally…",
+    "options": [
+      {
+        "id": "FF02_A",
+        "dimension": "FF",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Compare their specific features and the evidence supporting each."
+      },
+      {
+        "id": "FF02_B",
+        "dimension": "FF",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Clarify the particulars of each option before making the choice."
+      },
+      {
+        "id": "FF02_C",
+        "dimension": "FF",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Compare the main differences that affect what I need."
+      },
+      {
+        "id": "FF02_D",
+        "dimension": "FF",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Make an overall assessment from the essential information."
+      }
+    ]
+  },
+  {
+    "id": "FF03",
+    "dimension": "FF",
+    "direction": "normal",
+    "facet": "explaining",
+    "prompt": "When explaining something I understand, I naturally…",
+    "options": [
+      {
+        "id": "FF03_A",
+        "dimension": "FF",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Give a concise summary of the main points."
+      },
+      {
+        "id": "FF03_B",
+        "dimension": "FF",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Use a broad explanation that conveys the essential meaning."
+      },
+      {
+        "id": "FF03_C",
+        "dimension": "FF",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Define the terms and distinctions that make the explanation precise."
+      },
+      {
+        "id": "FF03_D",
+        "dimension": "FF",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Provide context and supporting details so the explanation is complete."
+      }
+    ]
+  },
+  {
+    "id": "FF04",
+    "dimension": "FF",
+    "direction": "normal",
+    "facet": "researching",
+    "prompt": "When looking into a question that matters to me, I naturally…",
+    "options": [
+      {
+        "id": "FF04_A",
+        "dimension": "FF",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Seek a useful overview that answers the central question."
+      },
+      {
+        "id": "FF04_B",
+        "dimension": "FF",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Gather the essential facts and summarize what they suggest."
+      },
+      {
+        "id": "FF04_C",
+        "dimension": "FF",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Trace the supporting sources and examine how their details connect."
+      },
+      {
+        "id": "FF04_D",
+        "dimension": "FF",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Investigate the qualifications and specifics behind the available answers."
+      }
+    ]
+  },
+  {
+    "id": "FF05",
+    "dimension": "FF",
+    "direction": "reverse",
+    "facet": "troubleshooting",
+    "prompt": "When I need to understand why something is not working, I naturally…",
+    "options": [
+      {
+        "id": "FF05_A",
+        "dimension": "FF",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Examine the symptoms individually to pinpoint what is happening."
+      },
+      {
+        "id": "FF05_B",
+        "dimension": "FF",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Check the relevant details to distinguish between possible causes."
+      },
+      {
+        "id": "FF05_C",
+        "dimension": "FF",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Form a broad picture from the main symptoms."
+      },
+      {
+        "id": "FF05_D",
+        "dimension": "FF",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Reduce the available information to the most likely explanation."
+      }
+    ]
+  },
+  {
+    "id": "FF06",
+    "dimension": "FF",
+    "direction": "reverse",
+    "facet": "evaluating claims",
+    "prompt": "When considering a claim that could influence a decision, I naturally…",
+    "options": [
+      {
+        "id": "FF06_A",
+        "dimension": "FF",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Examine the source and the evidence that supports the claim."
+      },
+      {
+        "id": "FF06_B",
+        "dimension": "FF",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Check its specific conditions and what the evidence actually establishes."
+      },
+      {
+        "id": "FF06_C",
+        "dimension": "FF",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Assess its overall meaning against the essential facts I know."
+      },
+      {
+        "id": "FF06_D",
+        "dimension": "FF",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Focus on the central point and its practical implications."
+      }
+    ]
+  },
+  {
+    "id": "FF07",
+    "dimension": "FF",
+    "direction": "normal",
+    "facet": "starting unfamiliar tasks",
+    "prompt": "When finding out what an unfamiliar task requires, I naturally…",
+    "options": [
+      {
+        "id": "FF07_A",
+        "dimension": "FF",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Get a broad understanding of the goal and main requirements."
+      },
+      {
+        "id": "FF07_B",
+        "dimension": "FF",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Condense the task into the essential information needed to begin."
+      },
+      {
+        "id": "FF07_C",
+        "dimension": "FF",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Investigate the particular requirements and the context behind them."
+      },
+      {
+        "id": "FF07_D",
+        "dimension": "FF",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Define exactly what the task involves before choosing my approach."
+      }
+    ]
+  },
+  {
+    "id": "FF08",
+    "dimension": "FF",
+    "direction": "reverse",
+    "facet": "receiving instructions",
+    "prompt": "When someone describes what they need me to do, I naturally…",
+    "options": [
+      {
+        "id": "FF08_A",
+        "dimension": "FF",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Ask about exact meanings, conditions, and specific expectations."
+      },
+      {
+        "id": "FF08_B",
+        "dimension": "FF",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Clarify the details that distinguish an acceptable outcome from other possibilities."
+      },
+      {
+        "id": "FF08_C",
+        "dimension": "FF",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Extract the main intention and work from that summary."
+      },
+      {
+        "id": "FF08_D",
+        "dimension": "FF",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Focus on the few instructions that determine the essential outcome."
+      }
+    ]
+  },
+  {
+    "id": "FF09",
+    "dimension": "FF",
+    "direction": "normal",
+    "facet": "resolving ambiguity",
+    "prompt": "When a description contains unclear information, I naturally…",
+    "options": [
+      {
+        "id": "FF09_A",
+        "dimension": "FF",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Use a reasonable approximation of its overall meaning."
+      },
+      {
+        "id": "FF09_B",
+        "dimension": "FF",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Work from the main point and estimate the remaining particulars."
+      },
+      {
+        "id": "FF09_C",
+        "dimension": "FF",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Clarify the uncertain terms so their meaning is specific."
+      },
+      {
+        "id": "FF09_D",
+        "dimension": "FF",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Seek the missing context to determine exactly what is intended."
+      }
+    ]
+  },
+  {
+    "id": "FT01",
+    "dimension": "FT",
+    "direction": "reverse",
+    "facet": "planning",
+    "prompt": "When I have several things to get done, I naturally…",
+    "options": [
+      {
+        "id": "FT01_A",
+        "dimension": "FT",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Arrange the activities into a sequence I can work through."
+      },
+      {
+        "id": "FT01_B",
+        "dimension": "FT",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Create a plan that connects the activities and their dependencies."
+      },
+      {
+        "id": "FT01_C",
+        "dimension": "FT",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Choose the next useful activity as I go."
+      },
+      {
+        "id": "FT01_D",
+        "dimension": "FT",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Keep the order flexible and move between activities when needed."
+      }
+    ]
+  },
+  {
+    "id": "FT02",
+    "dimension": "FT",
+    "direction": "normal",
+    "facet": "recurring tasks",
+    "prompt": "When handling something that needs doing regularly, I naturally…",
+    "options": [
+      {
+        "id": "FT02_A",
+        "dimension": "FT",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Adjust how I do it to suit each occasion."
+      },
+      {
+        "id": "FT02_B",
+        "dimension": "FT",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Find a route through the task that fits what is needed now."
+      },
+      {
+        "id": "FT02_C",
+        "dimension": "FT",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Establish a repeatable routine for completing it."
+      },
+      {
+        "id": "FT02_D",
+        "dimension": "FT",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Use a consistent sequence that I can return to each time."
+      }
+    ]
+  },
+  {
+    "id": "FT03",
+    "dimension": "FT",
+    "direction": "reverse",
+    "facet": "interrupted workflows",
+    "prompt": "When returning to a task after an interruption, I naturally…",
+    "options": [
+      {
+        "id": "FT03_A",
+        "dimension": "FT",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Resume at the step where I left off."
+      },
+      {
+        "id": "FT03_B",
+        "dimension": "FT",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Reconnect the remaining steps into an orderly sequence before continuing."
+      },
+      {
+        "id": "FT03_C",
+        "dimension": "FT",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Reshape the remaining work around what is useful now."
+      },
+      {
+        "id": "FT03_D",
+        "dimension": "FT",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Pick up whichever part makes sense without restoring the previous order."
+      }
+    ]
+  },
+  {
+    "id": "FT04",
+    "dimension": "FT",
+    "direction": "normal",
+    "facet": "organization",
+    "prompt": "When organizing things I use often, I naturally…",
+    "options": [
+      {
+        "id": "FT04_A",
+        "dimension": "FT",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Let their arrangement evolve as my activities change."
+      },
+      {
+        "id": "FT04_B",
+        "dimension": "FT",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Regroup them around what I happen to need at the time."
+      },
+      {
+        "id": "FT04_C",
+        "dimension": "FT",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Assign them consistent places within an organizing system."
+      },
+      {
+        "id": "FT04_D",
+        "dimension": "FT",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Arrange them in categories that I can maintain over time."
+      }
+    ]
+  },
+  {
+    "id": "FT05",
+    "dimension": "FT",
+    "direction": "normal",
+    "facet": "scheduling",
+    "prompt": "When deciding how to use an open afternoon, I naturally…",
+    "options": [
+      {
+        "id": "FT05_A",
+        "dimension": "FT",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Let one activity lead to another and adjust the timing."
+      },
+      {
+        "id": "FT05_B",
+        "dimension": "FT",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Leave the schedule open so I can change the order freely."
+      },
+      {
+        "id": "FT05_C",
+        "dimension": "FT",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Give the activities a sequence and an approximate timetable."
+      },
+      {
+        "id": "FT05_D",
+        "dimension": "FT",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Structure the afternoon into blocks for the activities I intend to do."
+      }
+    ]
+  },
+  {
+    "id": "FT06",
+    "dimension": "FT",
+    "direction": "reverse",
+    "facet": "project structure",
+    "prompt": "When beginning a project with several parts, I naturally…",
+    "options": [
+      {
+        "id": "FT06_A",
+        "dimension": "FT",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Build a structure that connects the parts in an orderly way."
+      },
+      {
+        "id": "FT06_B",
+        "dimension": "FT",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Set out the stages and how one leads to the next."
+      },
+      {
+        "id": "FT06_C",
+        "dimension": "FT",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Start with a useful part and reshape the organization along the way."
+      },
+      {
+        "id": "FT06_D",
+        "dimension": "FT",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Move between parts as the connections become useful."
+      }
+    ]
+  },
+  {
+    "id": "FT07",
+    "dimension": "FT",
+    "direction": "reverse",
+    "facet": "changing priorities",
+    "prompt": "When priorities change while I am working, I naturally…",
+    "options": [
+      {
+        "id": "FT07_A",
+        "dimension": "FT",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Revise the plan into a new sequence before continuing."
+      },
+      {
+        "id": "FT07_B",
+        "dimension": "FT",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Update the workflow so the new priority has a clear place in it."
+      },
+      {
+        "id": "FT07_C",
+        "dimension": "FT",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Switch to the new priority and adjust the remaining work as needed."
+      },
+      {
+        "id": "FT07_D",
+        "dimension": "FT",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Rearrange individual steps freely around the new demand."
+      }
+    ]
+  },
+  {
+    "id": "FT08",
+    "dimension": "FT",
+    "direction": "normal",
+    "facet": "keeping systems",
+    "prompt": "When an organizing system no longer fits smoothly, I naturally…",
+    "options": [
+      {
+        "id": "FT08_A",
+        "dimension": "FT",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Bypass or rearrange its parts to suit the immediate need."
+      },
+      {
+        "id": "FT08_B",
+        "dimension": "FT",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Use a flexible arrangement that can change from one occasion to another."
+      },
+      {
+        "id": "FT08_C",
+        "dimension": "FT",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Refine its structure so I can keep using a consistent process."
+      },
+      {
+        "id": "FT08_D",
+        "dimension": "FT",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Reorganize it into a system with clear places and repeatable steps."
+      }
+    ]
+  },
+  {
+    "id": "FT09",
+    "dimension": "FT",
+    "direction": "reverse",
+    "facet": "multi-step work",
+    "prompt": "When completing something with many steps, I naturally…",
+    "options": [
+      {
+        "id": "FT09_A",
+        "dimension": "FT",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Track the steps in sequence and finish them in that order."
+      },
+      {
+        "id": "FT09_B",
+        "dimension": "FT",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Use a consistent process that connects each step to the next."
+      },
+      {
+        "id": "FT09_C",
+        "dimension": "FT",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Move between steps and use shortcuts when a shorter route appears."
+      },
+      {
+        "id": "FT09_D",
+        "dimension": "FT",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Adapt the order around whichever parts can be completed now."
+      }
+    ]
+  },
+  {
+    "id": "QS01",
+    "dimension": "QS",
+    "direction": "normal",
+    "facet": "new ideas",
+    "prompt": "When a new idea could replace an approach that already works, I naturally…",
+    "options": [
+      {
+        "id": "QS01_A",
+        "dimension": "QS",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Keep the working approach unless a change is clearly needed."
+      },
+      {
+        "id": "QS01_B",
+        "dimension": "QS",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Preserve the dependable parts and limit changes to what is necessary."
+      },
+      {
+        "id": "QS01_C",
+        "dimension": "QS",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Try a version of the new idea to discover what it offers."
+      },
+      {
+        "id": "QS01_D",
+        "dimension": "QS",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Explore several fresh alternatives to the existing approach."
+      }
+    ]
+  },
+  {
+    "id": "QS02",
+    "dimension": "QS",
+    "direction": "normal",
+    "facet": "uncertain situations",
+    "prompt": "When a situation has no settled way forward, I naturally…",
+    "options": [
+      {
+        "id": "QS02_A",
+        "dimension": "QS",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Narrow the possibilities to make the next move more predictable."
+      },
+      {
+        "id": "QS02_B",
+        "dimension": "QS",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Establish a dependable starting point that limits the uncertainty."
+      },
+      {
+        "id": "QS02_C",
+        "dimension": "QS",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Take an exploratory step while the outcome is still open."
+      },
+      {
+        "id": "QS02_D",
+        "dimension": "QS",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Try different possibilities and let the next move emerge."
+      }
+    ]
+  },
+  {
+    "id": "QS03",
+    "dimension": "QS",
+    "direction": "reverse",
+    "facet": "deadlines",
+    "prompt": "When time is short and I need a workable approach, I naturally…",
+    "options": [
+      {
+        "id": "QS03_A",
+        "dimension": "QS",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Improvise an approach that fits the immediate situation."
+      },
+      {
+        "id": "QS03_B",
+        "dimension": "QS",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Try a fresh possibility and adjust it as the result develops."
+      },
+      {
+        "id": "QS03_C",
+        "dimension": "QS",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Use a familiar approach with a predictable outcome."
+      },
+      {
+        "id": "QS03_D",
+        "dimension": "QS",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Limit new variations so I can rely on what already works."
+      }
+    ]
+  },
+  {
+    "id": "QS04",
+    "dimension": "QS",
+    "direction": "reverse",
+    "facet": "experimentation",
+    "prompt": "When there is room to improve how something is done, I naturally…",
+    "options": [
+      {
+        "id": "QS04_A",
+        "dimension": "QS",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Test an unfamiliar approach to see what it could offer."
+      },
+      {
+        "id": "QS04_B",
+        "dimension": "QS",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Explore several novel ways of getting the same outcome."
+      },
+      {
+        "id": "QS04_C",
+        "dimension": "QS",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Make measured changes within an established approach."
+      },
+      {
+        "id": "QS04_D",
+        "dimension": "QS",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Retain the proven method and contain uncertain variations."
+      }
+    ]
+  },
+  {
+    "id": "QS05",
+    "dimension": "QS",
+    "direction": "normal",
+    "facet": "untested opportunities",
+    "prompt": "When an opportunity looks useful but its outcome is uncertain, I naturally…",
+    "options": [
+      {
+        "id": "QS05_A",
+        "dimension": "QS",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Shape it into a more predictable option before pursuing it."
+      },
+      {
+        "id": "QS05_B",
+        "dimension": "QS",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Choose a version that relies on established approaches."
+      },
+      {
+        "id": "QS05_C",
+        "dimension": "QS",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Take an exploratory first step while its outcome remains uncertain."
+      },
+      {
+        "id": "QS05_D",
+        "dimension": "QS",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Try an untested variation to discover what the opportunity could become."
+      }
+    ]
+  },
+  {
+    "id": "QS06",
+    "dimension": "QS",
+    "direction": "reverse",
+    "facet": "failed attempts",
+    "prompt": "When an initial approach does not produce the result I wanted, I naturally…",
+    "options": [
+      {
+        "id": "QS06_A",
+        "dimension": "QS",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Try a different possibility even though its outcome is not yet known."
+      },
+      {
+        "id": "QS06_B",
+        "dimension": "QS",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Generate fresh approaches and experiment with another attempt."
+      },
+      {
+        "id": "QS06_C",
+        "dimension": "QS",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Return to a dependable approach as a stable starting point."
+      },
+      {
+        "id": "QS06_D",
+        "dimension": "QS",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Narrow the next attempt to familiar possibilities with known outcomes."
+      }
+    ]
+  },
+  {
+    "id": "QS07",
+    "dimension": "QS",
+    "direction": "normal",
+    "facet": "changing plans",
+    "prompt": "When an unexpected change opens new possibilities, I naturally…",
+    "options": [
+      {
+        "id": "QS07_A",
+        "dimension": "QS",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Contain the changes so the overall course stays dependable."
+      },
+      {
+        "id": "QS07_B",
+        "dimension": "QS",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Preserve the proven approach and limit the new uncertainties."
+      },
+      {
+        "id": "QS07_C",
+        "dimension": "QS",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Explore the new possibilities and improvise another course."
+      },
+      {
+        "id": "QS07_D",
+        "dimension": "QS",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Try an unexpected alternative made possible by the change."
+      }
+    ]
+  },
+  {
+    "id": "QS08",
+    "dimension": "QS",
+    "direction": "normal",
+    "facet": "brainstorming",
+    "prompt": "When considering approaches to an open-ended problem, I naturally…",
+    "options": [
+      {
+        "id": "QS08_A",
+        "dimension": "QS",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Focus on a few established possibilities and narrow toward one."
+      },
+      {
+        "id": "QS08_B",
+        "dimension": "QS",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Keep the range contained around approaches with predictable outcomes."
+      },
+      {
+        "id": "QS08_C",
+        "dimension": "QS",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Generate a broad range of fresh alternatives before settling on one."
+      },
+      {
+        "id": "QS08_D",
+        "dimension": "QS",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Explore unusual possibilities to discover a new way forward."
+      }
+    ]
+  },
+  {
+    "id": "QS09",
+    "dimension": "QS",
+    "direction": "reverse",
+    "facet": "risk versus predictability",
+    "prompt": "When two approaches seem equally useful for a low-stakes task, I naturally…",
+    "options": [
+      {
+        "id": "QS09_A",
+        "dimension": "QS",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Choose the untested approach for the possibility of discovering something new."
+      },
+      {
+        "id": "QS09_B",
+        "dimension": "QS",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Try an unfamiliar variation and learn from how it turns out."
+      },
+      {
+        "id": "QS09_C",
+        "dimension": "QS",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Choose the proven approach for its predictable outcome."
+      },
+      {
+        "id": "QS09_D",
+        "dimension": "QS",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Choose a familiar approach that keeps uncertain variations contained."
+      }
+    ]
+  },
+  {
+    "id": "IM01",
+    "dimension": "IM",
+    "direction": "reverse",
+    "facet": "understanding mechanisms",
+    "prompt": "When understanding how a mechanism works, I naturally…",
+    "options": [
+      {
+        "id": "IM01_A",
+        "dimension": "IM",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Handle the mechanism's parts and observe their movement."
+      },
+      {
+        "id": "IM01_B",
+        "dimension": "IM",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Use a physical model to explore how the parts interact."
+      },
+      {
+        "id": "IM01_C",
+        "dimension": "IM",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Picture how the parts relate and move in my mind."
+      },
+      {
+        "id": "IM01_D",
+        "dimension": "IM",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Use a diagram or description to represent the mechanism's operation."
+      }
+    ]
+  },
+  {
+    "id": "IM02",
+    "dimension": "IM",
+    "direction": "normal",
+    "facet": "building",
+    "prompt": "When working out how to make a simple object, I naturally…",
+    "options": [
+      {
+        "id": "IM02_A",
+        "dimension": "IM",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Imagine its shape and connections before making anything physical."
+      },
+      {
+        "id": "IM02_B",
+        "dimension": "IM",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Represent the object through a sketch or a symbolic plan."
+      },
+      {
+        "id": "IM02_C",
+        "dimension": "IM",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Put actual pieces together to work out the shape and connections."
+      },
+      {
+        "id": "IM02_D",
+        "dimension": "IM",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Make a tangible stand-in that I can hold and adjust."
+      }
+    ]
+  },
+  {
+    "id": "IM03",
+    "dimension": "IM",
+    "direction": "normal",
+    "facet": "repairing",
+    "prompt": "When working out a repair for a familiar object, I naturally…",
+    "options": [
+      {
+        "id": "IM03_A",
+        "dimension": "IM",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Mentally trace how the parts should fit to restore its function."
+      },
+      {
+        "id": "IM03_B",
+        "dimension": "IM",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Use a drawing or description to reason through the repair."
+      },
+      {
+        "id": "IM03_C",
+        "dimension": "IM",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Position and handle the parts to work out their fit."
+      },
+      {
+        "id": "IM03_D",
+        "dimension": "IM",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Use the actual object or a physical substitute to develop the repair."
+      }
+    ]
+  },
+  {
+    "id": "IM04",
+    "dimension": "IM",
+    "direction": "reverse",
+    "facet": "learning",
+    "prompt": "When learning how an unfamiliar physical device operates, I naturally…",
+    "options": [
+      {
+        "id": "IM04_A",
+        "dimension": "IM",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Explore the actual device by handling its controls and parts."
+      },
+      {
+        "id": "IM04_B",
+        "dimension": "IM",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Use a tangible demonstration to work through how it operates."
+      },
+      {
+        "id": "IM04_C",
+        "dimension": "IM",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Build a mental picture of its operation from a description."
+      },
+      {
+        "id": "IM04_D",
+        "dimension": "IM",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Map its controls and relationships through diagrams or symbols."
+      }
+    ]
+  },
+  {
+    "id": "IM05",
+    "dimension": "IM",
+    "direction": "reverse",
+    "facet": "prototyping",
+    "prompt": "When developing an idea for a physical design, I naturally…",
+    "options": [
+      {
+        "id": "IM05_A",
+        "dimension": "IM",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Make a rough physical model that I can touch and alter."
+      },
+      {
+        "id": "IM05_B",
+        "dimension": "IM",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Arrange sample materials to develop the design tangibly."
+      },
+      {
+        "id": "IM05_C",
+        "dimension": "IM",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Revise a mental model of its shape and operation."
+      },
+      {
+        "id": "IM05_D",
+        "dimension": "IM",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Work through the design using drawings or symbolic representations."
+      }
+    ]
+  },
+  {
+    "id": "IM06",
+    "dimension": "IM",
+    "direction": "normal",
+    "facet": "explaining",
+    "prompt": "When explaining how physical parts fit together, I naturally…",
+    "options": [
+      {
+        "id": "IM06_A",
+        "dimension": "IM",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Describe the relationships so the arrangement can be imagined."
+      },
+      {
+        "id": "IM06_B",
+        "dimension": "IM",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Use a diagram to represent how the parts connect."
+      },
+      {
+        "id": "IM06_C",
+        "dimension": "IM",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Use actual pieces to demonstrate the arrangement."
+      },
+      {
+        "id": "IM06_D",
+        "dimension": "IM",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Build a physical representation that the other person can handle."
+      }
+    ]
+  },
+  {
+    "id": "IM07",
+    "dimension": "IM",
+    "direction": "reverse",
+    "facet": "designing",
+    "prompt": "When designing the layout of a small space, I naturally…",
+    "options": [
+      {
+        "id": "IM07_A",
+        "dimension": "IM",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Move the actual objects to explore their arrangement."
+      },
+      {
+        "id": "IM07_B",
+        "dimension": "IM",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Use physical stand-ins to work out the layout tangibly."
+      },
+      {
+        "id": "IM07_C",
+        "dimension": "IM",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Visualize the arrangement and mentally move things around."
+      },
+      {
+        "id": "IM07_D",
+        "dimension": "IM",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Work out the arrangement on a drawn or symbolic plan."
+      }
+    ]
+  },
+  {
+    "id": "IM08",
+    "dimension": "IM",
+    "direction": "reverse",
+    "facet": "physical demonstrations",
+    "prompt": "When figuring out how an object might move or balance, I naturally…",
+    "options": [
+      {
+        "id": "IM08_A",
+        "dimension": "IM",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Handle the object to explore its movement and balance."
+      },
+      {
+        "id": "IM08_B",
+        "dimension": "IM",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Use a physical substitute to feel how the movement works."
+      },
+      {
+        "id": "IM08_C",
+        "dimension": "IM",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Mentally simulate its movement and possible positions."
+      },
+      {
+        "id": "IM08_D",
+        "dimension": "IM",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Reason through its movement using a diagram or description."
+      }
+    ]
+  },
+  {
+    "id": "IM09",
+    "dimension": "IM",
+    "direction": "normal",
+    "facet": "spatial and tangible problem solving",
+    "prompt": "When working out whether several things will fit together, I naturally…",
+    "options": [
+      {
+        "id": "IM09_A",
+        "dimension": "IM",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Picture their shapes and positions in my mind."
+      },
+      {
+        "id": "IM09_B",
+        "dimension": "IM",
+        "pole": "low",
+        "polarity": -1,
+        "text": "Represent their arrangement on a sketch or a plan."
+      },
+      {
+        "id": "IM09_C",
+        "dimension": "IM",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Bring the actual objects together and adjust their positions."
+      },
+      {
+        "id": "IM09_D",
+        "dimension": "IM",
+        "pole": "high",
+        "polarity": 1,
+        "text": "Use tangible stand-ins to work out the fit directly."
+      }
+    ]
+  }
+];
+const LOW = {FF:'Leans toward simplifying / working from essentials.',FT:'Leans toward adapting / reorganizing.',QS:'Leans toward stabilizing / protecting proven approaches.',IM:'Leans toward conceptualizing / working abstractly.'};
+const HIGH = {FF:'Leans toward specifying / investigating.',FT:'Leans toward systematizing / sequencing.',QS:'Leans toward innovating / experimenting.',IM:'Leans toward building / working tangibly.'};
+const byId = Object.fromEntries(QUESTIONS.map(q => [q.id,q]));
+const $ = id => document.getElementById(id);
+function shuffle(ids) {
+  const result=ids.slice();
+  for(let i=result.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[result[i],result[j]]=[result[j],result[i]];}
+  return result;
+}
+function freshState() {
+  return {version:VERSION,order:shuffle(QUESTIONS.map(q=>q.id)),optionOrder:Object.fromEntries(QUESTIONS.map(q=>[q.id,shuffle(q.options.map(o=>o.id))])),responses:{},index:0,view:'intro'};
+}
+function optionFor(q,id) { return q.options.find(o=>o.id===id); }
+function validPartial(q,response) {
+  return !!response && typeof response==='object' && !Array.isArray(response) &&
+    Object.keys(response).every(k=>k==='most'||k==='least') &&
+    ['most','least'].every(k=>response[k]==null||!!optionFor(q,response[k])) &&
+    (!response.most||!response.least||response.most!==response.least);
+}
+function isResponse(q,response) { return validPartial(q,response) && !!response.most && !!response.least; }
+function isComplete(responses) { return !!responses && QUESTIONS.every(q=>isResponse(q,responses[q.id])); }
+function validPermutation(order,ids) { return Array.isArray(order)&&order.length===ids.length&&new Set(order).size===ids.length&&order.every(id=>ids.includes(id)); }
+function validState(saved) {
+  if(!saved||saved.version!==VERSION||!validPermutation(saved.order,QUESTIONS.map(q=>q.id)))return false;
+  if(!saved.optionOrder||!QUESTIONS.every(q=>validPermutation(saved.optionOrder[q.id],q.options.map(o=>o.id))))return false;
+  if(!saved.responses||typeof saved.responses!=='object'||Array.isArray(saved.responses)||!Object.entries(saved.responses).every(([id,r])=>Object.hasOwn(byId,id)&&validPartial(byId[id],r)))return false;
+  if(!Number.isInteger(saved.index)||saved.index<0||saved.index>=36||!['intro','assessment','results'].includes(saved.view))return false;
+  return saved.view!=='results'||isComplete(saved.responses);
+}
+let state=freshState();
+try{const saved=JSON.parse(localStorage.getItem(STORAGE_KEY));if(validState(saved))state=saved;}catch(_){/* Local file storage is not available in every browser. */}
+function save() {
+  try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state));$('save-status').textContent='Saved in this browser';}
+  catch(_){$('save-status').textContent='Session only — export your results before closing.';}
+}
+function adjusted(q,response) {
+  const most=optionFor(q,response.most),least=optionFor(q,response.least);
+  return 3+most.polarity-least.polarity;
+}
+function estimate(raw) { return Math.max(1,Math.min(10,Math.round(1+((raw-9)/4)))); }
+function signed(value) { return value>0?'+'+value:String(value); }
+function calculate(responses,order,optionOrder) {
+  if(!isComplete(responses))throw new Error('Every question needs two different selections before scoring.');
+  if(!validPermutation(order,QUESTIONS.map(q=>q.id))||!optionOrder||!QUESTIONS.every(q=>validPermutation(optionOrder[q.id],q.options.map(o=>o.id))))throw new Error('The display order is incomplete.');
+  const rawScores={FF:0,FT:0,QS:0,IM:0},rawResponses={},adjustedResponses={},resolvedResponses={};
+  const selections=Object.fromEntries(DIMENSIONS.map(d=>[d,{most:0,least:0,mostHigh:0,mostLow:0,leastHigh:0,leastLow:0,total:0,highContrasts:0,lowContrasts:0,samePolePairs:0}]));
+  QUESTIONS.forEach(q=>{
+    const r=responses[q.id],most=optionFor(q,r.most),least=optionFor(q,r.least);
+    // Every question compares four actions on ONE construct, so every dimension
+    // receives nine paired responses. A same-pole pair provides no opposing-pole
+    // contrast; its midpoint is a scoring convention, not an answer of "both".
+    const itemScore=adjusted(q,r);
+    rawResponses[q.id]={most:r.most,least:r.least};adjustedResponses[q.id]=itemScore;
+    const resolve=o=>({optionId:o.id,displayedLetter:'ABCD'[optionOrder[q.id].indexOf(o.id)],text:o.text,dimension:o.dimension,pole:o.pole,polarity:o.polarity});
+    resolvedResponses[q.id]={most:resolve(most),least:resolve(least)};
+    rawScores[q.dimension]+=itemScore;
+    const evidence=selections[q.dimension];
+    if(itemScore===5)evidence.highContrasts++;
+    else if(itemScore===1)evidence.lowContrasts++;
+    else evidence.samePolePairs++;
+    for(const [role,o] of [['most',most],['least',least]]){
+      const stats=selections[o.dimension];stats[role]++;stats[role+(o.polarity===1?'High':'Low')]++;stats.total++;
+    }
+  });
+  const estimated={},normalized={};
+  DIMENSIONS.forEach(d=>{estimated[d]=estimate(rawScores[d]);normalized[d]=Number((((rawScores[d]-9)/36)*100).toFixed(1));});
+  return {
+    version:VERSION,assessment:'CONATIVE ACTION PROFILE',format:FORMAT,
+    itemBankVersion:VERSION,scoringVersion:SCORING_VERSION,
+    disclaimer:'Independent assessment with original questions targeting four action constructs. Experimental 1–10 conversion — not an official Kolbe result. This question bank and scoring require empirical calibration and validation.',
+    estimated,rawScores,normalized,selections,responses:rawResponses,adjustedResponses,resolvedResponses,
+    questionOrder:order.slice(),optionOrder:Object.fromEntries(QUESTIONS.map(q=>[q.id,optionOrder[q.id].slice()])),dimensionNames:{...NAMES},
+    scoring:{method:SCORING_VERSION,itemAdjusted:'3 + most.polarity - least.polarity',polarity:{high:1,low:-1},highContrast:'MOST high and LEAST low = 5',lowContrast:'MOST low and LEAST high = 1',samePole:'MOST and LEAST on the same pole = 3 (no opposing-pole contrast; not a participant response of both/depends)',raw:'Sum of 9 adjusted paired responses per dimension; range 9–45',normalized:'((raw - 9) / 36) * 100; rounded to 1 decimal',estimated:'round(1 + ((raw - 9) / 4)); clamped to 1–10; the experimental conversion requested in the original specification',balance:'9 distinct scenarios per dimension. Every question has 2 low-pole and 2 high-pole actions. Approximately half of each dimension has reversed base option order; displayed options are also shuffled.',limitations:'This contrast rule is a declared scoring model, not empirically fitted Kolbe scoring. Same-pole pairs and mixed directional choices should be examined in the raw data. Midrange totals may reflect alternating contrasts or weak contrasting evidence, and do not by themselves prove flexibility.'},
+    calibration:{status:'not empirically calibrated',referenceProfile:null,availableData:'All 72 raw selections, 36 adjusted item scores, displayed order, exact option wording, construct/facet coding, and MOST/LEAST pole counts are preserved.',referenceRequirement:'Calibration to a reference assessment requires paired results from people who complete both assessments, followed by validation on separate participants. No reference responses or fitted mapping are included.'},
+    constructBasis:[{source:'Original user specification: four continua and nine scenario types per dimension',role:'Item-writing blueprint'},{source:'Kolbe public descriptions of action modes',url:'https://www.kolbe.com/kolbe-a-index/',role:'Public construct definitions, not copied questions or scoring'}],
+    dimensionCoverage:Object.fromEntries(DIMENSIONS.map(d=>[d,{questionIds:QUESTIONS.filter(q=>q.dimension===d).map(q=>q.id),facets:QUESTIONS.filter(q=>q.dimension===d).map(q=>q.facet),normalItems:QUESTIONS.filter(q=>q.dimension===d&&q.direction==='normal').length,reverseItems:QUESTIONS.filter(q=>q.dimension===d&&q.direction==='reverse').length}])),
+    questions:QUESTIONS.map(q=>({id:q.id,dimension:q.dimension,direction:q.direction,facet:q.facet,prompt:q.prompt,options:q.options.map(o=>({...o}))}))
+  };
+}
+function reportText(data) {
+  const rule='================================';
+  const lines=[rule,'CONATIVE ACTION PROFILE',rule,'','TEST_VERSION: '+VERSION,'SCORING_VERSION: '+SCORING_VERSION,'RESPONSE_FORMAT: '+FORMAT,'CALIBRATION_STATUS: '+data.calibration.status,'','ESTIMATED_PROFILE:'];
+  DIMENSIONS.forEach(d=>lines.push(d+': '+data.estimated[d]));
+  lines.push('','RAW_DIMENSION_SCORES:');DIMENSIONS.forEach(d=>lines.push(d+': '+data.rawScores[d]+'/45'));
+  lines.push('','NORMALIZED:');DIMENSIONS.forEach(d=>lines.push(d+': '+data.normalized[d].toFixed(1)+'%'));
+  lines.push('','SELECTION_COUNTS:');DIMENSIONS.forEach(d=>{const s=data.selections[d];lines.push(d+': MOST='+s.most+', LEAST='+s.least+', MOST_HIGH='+s.mostHigh+', MOST_LOW='+s.mostLow+', LEAST_HIGH='+s.leastHigh+', LEAST_LOW='+s.leastLow);});
+  lines.push('','RAW_RESPONSES:');QUESTIONS.forEach(q=>{const r=data.resolvedResponses[q.id];lines.push(q.id+': MOST='+r.most.displayedLetter+' ['+r.most.optionId+']; LEAST='+r.least.displayedLetter+' ['+r.least.optionId+']');});
+  lines.push('','ADJUSTED_RESPONSES:');QUESTIONS.forEach(q=>lines.push(q.id+': '+data.adjustedResponses[q.id]));
+  lines.push('','DIRECTIONAL_EVIDENCE:');DIMENSIONS.forEach(d=>{const s=data.selections[d];lines.push(d+': HIGH_CONTRASTS='+s.highContrasts+', LOW_CONTRASTS='+s.lowContrasts+', SAME_POLE_PAIRS='+s.samePolePairs);});
+  lines.push('','ITEM_DIRECTIONS:');QUESTIONS.forEach(q=>lines.push(q.id+': '+q.direction+'; FACET='+q.facet));
+  lines.push('','QUESTION_ORDER:',data.questionOrder.join(', '),'','OPTION_ORDER (A, B, C, D):');QUESTIONS.forEach(q=>lines.push(q.id+': '+data.optionOrder[q.id].join(', ')));
+  lines.push('','SCORING:',data.scoring.itemAdjusted,data.scoring.highContrast,data.scoring.lowContrast,data.scoring.samePole,data.scoring.raw,data.scoring.normalized,data.scoring.estimated,'','NOTE:',data.disclaimer,data.scoring.limitations,'Full question wording, option poles, construct coverage, and resolved choices appear in the JSON below.','',rule,'','JSON:',JSON.stringify(data,null,2));
+  return lines.join('\n');
+}
+function updateProgress() {
+  const answered=QUESTIONS.filter(q=>isResponse(q,state.responses[q.id])).length;
+  $('question-count').textContent='Question '+(state.index+1)+' of 36';$('answered-count').textContent=answered+' answered';
+  $('progress').setAttribute('aria-valuenow',answered);$('progress-fill').style.width=(answered/36*100)+'%';
+}
+function syncSelections(message='') {
+  const q=byId[state.order[state.index]],r=state.responses[q.id]||{};
+  document.querySelectorAll('input[name="most"],input[name="least"]').forEach(input=>{
+    input.checked=r[input.name]===input.value;
+  });
+  document.querySelectorAll('#option-rows tr').forEach(row=>{
+    row.classList.toggle('picked-most',r.most===row.dataset.optionId);
+    row.classList.toggle('picked-least',r.least===row.dataset.optionId);
+  });
+  $('next').disabled=!isResponse(q,r);
+  $('selection-status').textContent=message||(isResponse(q,r)?'Both selected. Ready to continue.':r.most?'Choose the approach you are LEAST likely to take.':r.least?'Choose the approach you are MOST likely to take.':'Choose one MOST and one LEAST.');
+  updateProgress();
+}
+function choose(role,optionId) {
+  const q=byId[state.order[state.index]];
+  if(!['most','least'].includes(role)||!optionFor(q,optionId))return;
+  const r={most:null,least:null,...state.responses[q.id]},other=role==='most'?'least':'most';
+  const conflict=r[other]===optionId;r[role]=optionId;if(conflict)r[other]=null;
+  state.responses[q.id]=r;save();
+  syncSelections(conflict?'That approach is now '+role.toUpperCase()+'. Choose a different '+other.toUpperCase()+' approach.':'');
+}
+function renderQuestion(focus=true) {
+  const q=byId[state.order[state.index]];$('question-title').textContent=q.prompt;$('option-rows').replaceChildren();
+  state.optionOrder[q.id].forEach((id,index)=>{
+    const option=optionFor(q,id),row=document.createElement('tr');row.dataset.optionId=id;
+    const heading=document.createElement('th');heading.scope='row';heading.className='option-text';
+    const letter=document.createElement('span');letter.className='option-letter';letter.setAttribute('aria-hidden','true');letter.textContent='ABCD'[index];
+    const text=document.createElement('span');text.textContent=option.text;heading.append(letter,text);row.append(heading);
+    ['most','least'].forEach(role=>{
+      const cell=document.createElement('td'),label=document.createElement('label');label.className='radio-hit';
+      const input=document.createElement('input');input.type='radio';input.name=role;input.value=id;
+      input.setAttribute('aria-label',role.toUpperCase()+' likely: '+option.text);input.setAttribute('aria-describedby','question-title');
+      input.addEventListener('change',()=>choose(role,id));
+      const circle=document.createElement('span');circle.className='radio-circle';circle.setAttribute('aria-hidden','true');
+      label.append(input,circle);cell.append(label);row.append(cell);
+    });
+    $('option-rows').append(row);
+  });
+  $('previous').disabled=state.index===0;$('next').textContent=state.index===35?'VIEW RESULTS':'Next →';syncSelections();
+  if(focus)$('question-title').focus();
+}
+function interpretation(d,score,evidence) {
+  if(evidence.samePolePairs===9)return 'Your MOST and LEAST choices did not contrast the two sides. Review the raw selections before interpreting this midpoint.';
+  return score<=3?LOW[d]:score>=7?HIGH[d]:'Your choices show mixed or limited directional evidence between the two strategies.';
+}
+function renderResults(focus=true) {
+  const data=calculate(state.responses,state.order,state.optionOrder);$('profile').replaceChildren();$('dimension-results').replaceChildren();
+  $('profile').setAttribute('aria-label',DIMENSIONS.map(d=>NAMES[d]+': '+data.estimated[d]).join('; '));
+  DIMENSIONS.forEach(d=>{
+    const cell=document.createElement('div');cell.className='profile-cell';
+    const number=document.createElement('div');number.className='profile-number';number.textContent=data.estimated[d];
+    const name=document.createElement('div');name.className='profile-dimension';name.textContent=d;cell.append(number,name);$('profile').append(cell);
+    const card=document.createElement('article');card.className='result-card';const title=document.createElement('h3');title.textContent=NAMES[d];
+    const metrics=document.createElement('div');metrics.className='result-metrics';const raw=document.createElement('span');raw.textContent=data.rawScores[d]+' / 45 raw';
+    const percent=document.createElement('strong');percent.textContent=data.normalized[d].toFixed(1)+'%';metrics.append(raw,percent);
+    const bar=document.createElement('div');bar.className='result-bar';bar.setAttribute('aria-hidden','true');const fill=document.createElement('span');fill.style.width=data.normalized[d]+'%';bar.append(fill);
+    const count=document.createElement('p');count.className='selection-count';count.textContent='9 scenarios · '+data.selections[d].highContrasts+' high-side / '+data.selections[d].lowContrasts+' low-side contrasts';
+    const description=document.createElement('p');description.className='interpretation';description.textContent=interpretation(d,data.estimated[d],data.selections[d]);
+    card.append(title,metrics,bar,count,description);$('dimension-results').append(card);
+  });
+  $('report').value=reportText(data);$('export-status').textContent='';if(focus)$('results-title').focus();
+}
+function render(focus=true) {
+  ['intro','assessment','results'].forEach(view=>$(view).hidden=view!==state.view);
+  if(state.view==='assessment')renderQuestion(focus);else if(state.view==='results')renderResults(focus);else if(focus)$('intro-title').focus();
+}
+function show(view) { state.view=view;save();render();window.scrollTo({top:0,behavior:'instant'}); }
+$('start').addEventListener('click',()=>show('assessment'));
+$('previous').addEventListener('click',()=>{if(state.index>0){state.index--;save();renderQuestion();}});
+$('next').addEventListener('click',()=>{
+  if(!isResponse(byId[state.order[state.index]],state.responses[state.order[state.index]]))return;
+  if(state.index<35){state.index++;save();renderQuestion();window.scrollTo({top:0,behavior:'instant'});}
+  else if(isComplete(state.responses))show('results');
+  else{state.index=state.order.findIndex(id=>!isResponse(byId[id],state.responses[id]));save();renderQuestion();}
+});
+$('review').addEventListener('click',()=>{state.index=0;show('assessment');});
+$('reset').addEventListener('click',()=>{
+  if(!window.confirm('Reset this version of the test? This deletes its saved answers and starts a newly shuffled assessment. Download or copy any results you want to keep first.'))return;
+  state=freshState();$('report').value='';$('profile').replaceChildren();$('dimension-results').replaceChildren();$('report-details').open=false;save();render();window.scrollTo({top:0,behavior:'instant'});
+});
+$('copy').addEventListener('click',async()=>{
+  const text=reportText(calculate(state.responses,state.order,state.optionOrder));const button=$('copy');button.disabled=true;
+  try{
+    let copied=false;
+    if(navigator.clipboard&&typeof navigator.clipboard.writeText==='function'){try{await navigator.clipboard.writeText(text);copied=true;}catch(_){/* A local browser may require manual copy. */}}
+    if(!copied){const field=$('report'),wasOpen=$('report-details').open;$('report-details').open=true;field.value=text;field.focus();field.select();field.setSelectionRange(0,field.value.length);
+      try{copied=typeof document.execCommand==='function'&&document.execCommand('copy');}catch(_){copied=false;}
+      if(copied){$('report-details').open=wasOpen;button.focus();}}
+    $('export-status').textContent=copied?'Copied — all 72 selections and the full analysis data are ready to share.':'Automatic copy is unavailable. The full report is selected below: use Copy in your device’s menu, or download the report.';
+  }finally{button.disabled=false;}
+});
+function download(content,type,filename) {
+  const blob=new Blob([content],{type}),url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download=filename;document.body.append(link);link.click();link.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),30000);$('export-status').textContent='Download requested. Your complete results are included in the file.';
+}
+$('download-report').addEventListener('click',()=>download(reportText(calculate(state.responses,state.order,state.optionOrder)),'text/plain;charset=utf-8','conative-profile-v3-results.txt'));
+$('download-json').addEventListener('click',()=>download(JSON.stringify(calculate(state.responses,state.order,state.optionOrder),null,2),'application/json;charset=utf-8','conative-profile-v3-results.json'));
+save();render(false);
+
+  </script>
+</body>
+</html>
