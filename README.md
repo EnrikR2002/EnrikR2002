@@ -1,6 +1,5 @@
 - 👋 Hi, I’m Enrik
 - 👀 I’m interested in: Bodybuilding, Bioenergetics, and Philosophy.
-- 🌱 I’m currently learning: React Native
 - 📫 How to reach me:
   - Discord: frikienriki
   - Linkedin: https://www.linkedin.com/in/enrik-rushiti-62520a255/ 
