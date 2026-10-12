@@ -1,0 +1,777 @@
+{
+  "person": {
+    "name": "Enrik Rushiti",
+    "shortName": "Enrik",
+    "location": "Calgary, Canada",
+    "headline": "Apps, automation & games.",
+    "intro": "I build things I want to use. Sometimes that means a better everyday tool. Sometimes it means a mobile app, a research system, or a game with friends.",
+    "about": "I’m a Computer Science graduate from Mount Royal University. My background spans data analysis at Suncor, hands-on IT work, and building software around problems I keep running into.",
+    "outside": "Outside the code: natural bodybuilding, bioenergetics, and philosophy. A lot of my projects start with those interests.",
+    "github": "https://github.com/EnrikR2002",
+    "linkedin": "https://www.linkedin.com/in/enrik-rushiti-62520a255/",
+    "discord": "frikienriki",
+    "education": {
+      "degree": "BSc Computer Science",
+      "school": "Mount Royal University",
+      "period": "2020–2025",
+      "detail": "GIS cognate · President’s & Dean’s Honor Roll"
+    },
+    "experience": [
+      {
+        "role": "IT Technician",
+        "company": "Electronic Recycling Association",
+        "period": "Apr 2026–present",
+        "summary": "Hardware diagnostics, refurbishment, system imaging, and device lifecycle management."
+      },
+      {
+        "role": "Data Analyst Intern",
+        "company": "Suncor Energy",
+        "period": "Sep 2023–Aug 2024",
+        "summary": "Data validation and schema work, cross-functional coordination, and translating technical findings for stakeholders."
+      }
+    ]
+  },
+  "site": {
+    "url": "https://enrikr2002.github.io/EnrikR2002/",
+    "repo": "https://github.com/EnrikR2002/EnrikR2002",
+    "reviewDate": "2026-10-11",
+    "published": false
+  },
+  "projects": [
+    {
+      "id": "enrikdraw",
+      "name": "EnrikDraw",
+      "category": "Web app",
+      "stage": "Built",
+      "summary": "Adds cloud document storage and autosave to Excalidraw drawings that remain editable inside Notion embeds.",
+      "stack": [
+        "Next.js",
+        "TypeScript",
+        "Supabase Postgres",
+        "Excalidraw"
+      ],
+      "role": "Repository owner; wrapper and persistence layer over Excalidraw.",
+      "bullets": [
+        "Built an Excalidraw wrapper with persistent drawing URLs, Supabase storage, autosave, and editable Notion embeds.",
+        "Implemented a protected management page and token-checked drawing access; kept drawing data portable in Excalidraw’s native format."
+      ],
+      "state": "Repository lists a Vercel homepage. Current uptime was not tested; the drawing editor itself is Excalidraw.",
+      "source": "https://github.com/EnrikR2002/EnrikDraw",
+      "sourceVisibility": "Public",
+      "demo": "https://enrikdraw.vercel.app",
+      "lastActivity": "2026-09-23",
+      "recent": true,
+      "featured": true,
+      "feature": {
+        "hook": "A whiteboard that stays where you put it.",
+        "outcome": "Cloud persistence for Excalidraw, right inside Notion.",
+        "visual": "draw",
+        "number": "01",
+        "color": "#6c8fff"
+      }
+    },
+    {
+      "id": "insertion-physique-studio",
+      "name": "Insertion Physique Studio",
+      "category": "Web app",
+      "stage": "Built",
+      "summary": "Interactive 3D physique studio for exploring muscle insertions, skeletal proportions, development, poses, and body measurements.",
+      "stack": [
+        "JavaScript",
+        "Three.js",
+        "Vite",
+        "Blender asset tools",
+        "Playwright"
+      ],
+      "role": "Repository owner; application built around credited external anatomy assets.",
+      "bullets": [
+        "Built a 3D physique studio with 24 adjustable traits, 12 poses, side-by-side comparisons, shareable configurations, and PNG export.",
+        "Integrated anatomical asset processing, surface-based measurements, and rendering that reduces GPU work when the scene is idle."
+      ],
+      "state": "Functional application documented in the repository. Anatomical sculpt and atlas come from credited third parties; model outputs are illustrative.",
+      "source": "https://github.com/EnrikR2002/Bodybuilding-Genetics-Simulator",
+      "sourceVisibility": "Public",
+      "demo": null,
+      "lastActivity": "2026-09-23",
+      "recent": true,
+      "featured": true,
+      "feature": {
+        "hook": "Make one change. See the whole physique respond.",
+        "outcome": "A 3D studio for physique traits, poses, and comparisons.",
+        "visual": "physique",
+        "number": "02",
+        "color": "#d3fa79"
+      }
+    },
+    {
+      "id": "mediadownloader",
+      "name": "MediaDownloader",
+      "category": "Automation",
+      "stage": "Built",
+      "summary": "Desktop media downloader with MP3/MP4 conversion, a managed queue, progress display, settings, and download history.",
+      "stack": [
+        "Python",
+        "CustomTkinter",
+        "yt-dlp",
+        "FFmpeg",
+        "SQLite",
+        "PyInstaller"
+      ],
+      "role": "Repository owner; desktop application implementation.",
+      "bullets": [
+        "Built a desktop MP3/MP4 downloader with queue controls, progress reporting, configurable conversion, and SQLite download history.",
+        "Integrated yt-dlp and FFmpeg, background processing, collision-safe output handling, and Windows executable packaging."
+      ],
+      "state": "Repository name is historical; current README calls the app MediaDownloader and documents several supported providers.",
+      "source": null,
+      "sourceVisibility": "Private",
+      "demo": null,
+      "lastActivity": "2026-10-10",
+      "recent": true,
+      "featured": true,
+      "feature": {
+        "hook": "A proper queue for media downloads.",
+        "outcome": "A desktop tool for batch downloads and MP3/MP4 conversion.",
+        "visual": "media",
+        "number": "03",
+        "color": "#c2a5ff"
+      }
+    },
+    {
+      "id": "streak-buddy",
+      "name": "Streak Buddy",
+      "category": "Mobile app",
+      "stage": "Built",
+      "summary": "Habit accountability app with photo proof, buddy review, time-zone-aware streaks, reminders, and live leaderboards.",
+      "stack": [
+        "React Native",
+        "Expo",
+        "Firebase Auth",
+        "Firestore",
+        "Storage",
+        "Cloud Functions",
+        "Zustand"
+      ],
+      "role": "Repository owner; mobile app implementation.",
+      "bullets": [
+        "Built a habit accountability app with photo proof uploads, buddy invitations, story-style reviews, and real-time leaderboards.",
+        "Implemented Firebase authentication/storage, time-zone-aware streak calculation, push reminders, and scheduled Cloud Functions."
+      ],
+      "state": "Buddy votes provide social feedback; streaks are based on submission timing, not approval. Current distribution status is unverified.",
+      "source": null,
+      "sourceVisibility": "Private",
+      "demo": null,
+      "lastActivity": "2025-11-25",
+      "recent": false,
+      "featured": true,
+      "feature": {
+        "hook": "Habits with something to show for them.",
+        "outcome": "Photo proof, friend reviews, and daily streaks.",
+        "visual": "habit",
+        "number": "04",
+        "color": "#ffad72"
+      }
+    },
+    {
+      "id": "article-to-pdf",
+      "name": "Article to PDF",
+      "category": "Web app",
+      "stage": "Built",
+      "summary": "Converts Substack posts, X posts, and X articles into offline PDFs with links, images, structured formatting, and bookmarks.",
+      "stack": [
+        "Next.js",
+        "TypeScript",
+        "PDFKit",
+        "Unicode fonts"
+      ],
+      "role": "Repository owner; extraction and PDF application.",
+      "bullets": [
+        "Built a Next.js converter that normalizes Substack and X content into structured blocks and generates bookmarked PDFs.",
+        "Handled Unicode fonts, nested content, clickable links, and pagination of long infographics."
+      ],
+      "state": "Functional local application documented with Windows launcher and deployment options. No current hosted URL confirmed.",
+      "source": "https://github.com/EnrikR2002/Substack-and-X-Articles-to-PDF",
+      "sourceVisibility": "Public",
+      "demo": null,
+      "lastActivity": "2026-09-10",
+      "recent": false,
+      "featured": true,
+      "feature": {
+        "hook": "Keep the article. Take it offline.",
+        "outcome": "Substack and X articles turned into readable PDFs.",
+        "visual": "pdf",
+        "number": "05",
+        "color": "#84d8dc"
+      }
+    },
+    {
+      "id": "ethan-portfolio-website",
+      "name": "Ethan Portfolio Website",
+      "category": "Web app",
+      "stage": "Built",
+      "summary": "Portfolio website for Ethan Alfandary showcasing audience growth, media systems, and creative work.",
+      "stack": [
+        "Astro",
+        "TypeScript",
+        "Tailwind CSS"
+      ],
+      "role": "Repository owner; website for Ethan.",
+      "bullets": [
+        "Built an Astro and Tailwind portfolio with reusable components, centralized content data, and versioned visual redesigns."
+      ],
+      "state": "README documents version 2.2 and historical release tags. Hosting and client results were not independently verified.",
+      "source": "https://github.com/EnrikR2002/ethan-site",
+      "sourceVisibility": "Public",
+      "demo": null,
+      "lastActivity": "2026-10-04",
+      "recent": true,
+      "featured": true,
+      "feature": {
+        "hook": "A home for someone else's body of work.",
+        "outcome": "A portfolio for media, audience growth, and creative direction.",
+        "visual": "portfolio",
+        "number": "06",
+        "color": "#f4bcda"
+      }
+    },
+    {
+      "id": "art-gallery-rest-api",
+      "name": "Art Gallery REST API",
+      "category": "Coursework",
+      "stage": "Coursework",
+      "summary": "REST API for paintings, artists, and galleries, including filters by country, artist, gallery, year, title, and color.",
+      "stack": [
+        "Node.js",
+        "Express",
+        "JavaScript",
+        "JSON"
+      ],
+      "role": "Repository owner; coursework implementation.",
+      "bullets": [
+        "Implemented Express endpoints over JSON art datasets, with query filters and explicit responses for missing records."
+      ],
+      "state": "2022 coursework. README contains historical Glitch URLs; current availability is unverified.",
+      "source": "https://github.com/EnrikR2002/3612Assignment3",
+      "sourceVisibility": "Public",
+      "demo": null,
+      "lastActivity": "2022-12-09",
+      "recent": false,
+      "featured": false,
+      "feature": null
+    },
+    {
+      "id": "daily-planner-across-programming-paradigms",
+      "name": "Daily Planner Across Programming Paradigms",
+      "category": "Coursework",
+      "stage": "Coursework",
+      "summary": "Team daily-planner assignment solving activity scheduling in imperative and declarative programming styles.",
+      "stack": [
+        "Java",
+        "Prolog",
+        "Haskell"
+      ],
+      "role": "Team member with Nimrat Brar and Pelvain Dhanda, explicitly credited in README.",
+      "bullets": [
+        "Collaborated on a daily activity scheduler implemented across Java, Prolog, and Haskell to compare imperative and declarative approaches."
+      ],
+      "state": "2023 coursework. Group membership is verified; the exact individual division of implementation is not recorded.",
+      "source": "https://github.com/nbrar891/COMP-3649-Assignment",
+      "sourceVisibility": "Public",
+      "demo": null,
+      "lastActivity": "2023-04-08",
+      "recent": false,
+      "featured": false,
+      "feature": null
+    },
+    {
+      "id": "dont-touch-that",
+      "name": "Don't Touch That",
+      "category": "Game",
+      "stage": "Prototype",
+      "summary": "Team Roblox chaos game prototype where forbidden objects reward the player and trigger hazards for everyone.",
+      "stack": [
+        "Luau",
+        "Roblox Studio",
+        "Rojo",
+        "PowerShell",
+        "GitHub Actions"
+      ],
+      "role": "Team project with Ethan and Ninety; repository owner.",
+      "bullets": [
+        "Collaborated on a Roblox prototype that links forbidden-object interactions to shared chaos, timed hazards, rewards, and extraction."
+      ],
+      "state": "Main holds the starter; gameplay is on prototype/forbidden-room. Not published to Roblox. Branch config confirms five object types and timed hazard parameters.",
+      "source": null,
+      "sourceVisibility": "Private",
+      "demo": null,
+      "lastActivity": "2026-10-08",
+      "recent": true,
+      "featured": false,
+      "feature": null
+    },
+    {
+      "id": "furry-land-customer-app",
+      "name": "Furry Land Customer App",
+      "category": "Mobile app",
+      "stage": "Prototype",
+      "summary": "Mobile dog-grooming prototype with pet profiles, a seven-step booking flow, appointment management, and payment UI.",
+      "stack": [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "React Navigation",
+        "AsyncStorage"
+      ],
+      "role": "Repository owner; customer app prototype.",
+      "bullets": [
+        "Built a React Native booking prototype with pet profiles, a seven-step booking flow, appointment tracking, and configurable cancellation rules.",
+        "Separated booking and payment services behind adapters for later integration; current authentication, booking data, and payment processing are mocked."
+      ],
+      "state": "UI prototype, not a deployed booking/payment system. Push notifications and calendar export include stubs.",
+      "source": null,
+      "sourceVisibility": "Private",
+      "demo": null,
+      "lastActivity": "2026-04-16",
+      "recent": false,
+      "featured": false,
+      "feature": null
+    },
+    {
+      "id": "grimewire-music-explorer",
+      "name": "GrimeWire Music Explorer",
+      "category": "Coursework",
+      "stage": "Coursework",
+      "summary": "Song browser with title, artist, and genre filters, playlist controls, and song-detail visualizations.",
+      "stack": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Chart.js"
+      ],
+      "role": "Team coursework with Shayne Prakash; both credited in UI.",
+      "bullets": [
+        "Co-developed a JavaScript music explorer with searchable song data, playlist controls, and Chart.js visualizations."
+      ],
+      "state": "2022 team coursework. Individual division of work has not been confirmed.",
+      "source": "https://github.com/EnrikR2002/3612Assignment2",
+      "sourceVisibility": "Public",
+      "demo": null,
+      "lastActivity": "2022-11-18",
+      "recent": false,
+      "featured": false,
+      "feature": null
+    },
+    {
+      "id": "instagram-reels-metadata-scraper",
+      "name": "Instagram Reels Metadata Scraper",
+      "category": "Automation",
+      "stage": "Built",
+      "summary": "Extracts accessible Reel metadata through a CLI, browser dashboard, and Windows launcher, with caching and optional thumbnail OCR.",
+      "stack": [
+        "Python",
+        "Flask",
+        "SQLite",
+        "Google Cloud Vision",
+        "PyInstaller"
+      ],
+      "role": "Repository owner; tool implementation.",
+      "bullets": [
+        "Built a shared scraping core with CLI and Flask interfaces, SQLite caching, retries, rate handling, and CSV/TSV export.",
+        "Added optional thumbnail OCR and Windows executable packaging with a first-run setup wizard."
+      ],
+      "state": "Executable packaging and setup are documented. Current Instagram compatibility was not exercised.",
+      "source": null,
+      "sourceVisibility": "Private",
+      "demo": null,
+      "lastActivity": "2025-11-12",
+      "recent": false,
+      "featured": false,
+      "feature": null
+    },
+    {
+      "id": "loot-goblins",
+      "name": "Loot Goblins",
+      "category": "Game",
+      "stage": "Prototype",
+      "summary": "Team Roblox raid prototype centered on stealing loot, world reactions, contested carrying, escape, and banking rewards.",
+      "stack": [
+        "Luau",
+        "Roblox Studio",
+        "Rojo",
+        "PowerShell",
+        "GitHub Actions"
+      ],
+      "role": "Team project with Ethan and Ninety; repository owner.",
+      "bullets": [
+        "Collaborated on a Roblox raid prototype with contested loot, reactive hazards, carrying and escape mechanics, timed rounds, and banking rewards.",
+        "Established a shared source workflow with pinned tools, automated checks, pull requests, and a one-click Studio launcher."
+      ],
+      "state": "README describes a playable vertical slice. Human playtesting remains the measure of whether the loop works.",
+      "source": "https://github.com/EnrikR2002/Loot-Goblins",
+      "sourceVisibility": "Public",
+      "demo": null,
+      "lastActivity": "2026-10-09",
+      "recent": true,
+      "featured": false,
+      "feature": null
+    },
+    {
+      "id": "n8n-and-oracle-automation-infrastructure",
+      "name": "n8n and Oracle Automation Infrastructure",
+      "category": "Automation",
+      "stage": "Tooling",
+      "summary": "Oracle VM provisioning and HTTPS self-hosted n8n infrastructure, with workflow and WorkJam session support.",
+      "stack": [
+        "Python",
+        "Oracle Cloud SDK",
+        "n8n",
+        "Docker Compose",
+        "Caddy"
+      ],
+      "role": "Repository owner; infrastructure and automation setup.",
+      "bullets": [
+        "Built an Oracle Cloud capacity-provisioning tool and deployed self-hosted n8n behind HTTPS using Docker Compose and Caddy.",
+        "Organized operational guides and automation support scripts in version control."
+      ],
+      "state": "Infrastructure is documented as deployed. The repository contains workflow guidance rather than evidence of a complete exported workflow suite.",
+      "source": null,
+      "sourceVisibility": "Private",
+      "demo": null,
+      "lastActivity": "2026-10-02",
+      "recent": true,
+      "featured": false,
+      "feature": null
+    },
+    {
+      "id": "picard-performance-platform",
+      "name": "Picard Performance Platform",
+      "category": "Web app",
+      "stage": "Foundation",
+      "summary": "Coaching platform foundation with a coach web dashboard, role-aware mobile app, shared packages, and database security.",
+      "stack": [
+        "Next.js",
+        "Expo",
+        "React Native",
+        "TypeScript",
+        "Supabase",
+        "Zod",
+        "pnpm",
+        "Turborepo"
+      ],
+      "role": "Repository owner; platform implementation for Ben Picard.",
+      "bullets": [
+        "Built the Phase 1 authentication and access-control foundation for a coaching platform across a Next.js dashboard and Expo mobile app.",
+        "Added coach/client routing, secure mobile session storage, shared validation/types, Supabase migrations, and automated security checks."
+      ],
+      "state": "Phase 1 only. Product tabs largely remain placeholders; hosted development setup and validation are still required per repository documentation.",
+      "source": null,
+      "sourceVisibility": "Private",
+      "demo": null,
+      "lastActivity": "2026-10-10",
+      "recent": true,
+      "featured": false,
+      "feature": null
+    },
+    {
+      "id": "roblox-game-development-template",
+      "name": "Roblox Game Development Template",
+      "category": "Developer tooling",
+      "stage": "Tooling",
+      "summary": "Reusable team scaffolding for Roblox projects with pinned tools, CI, onboarding docs, and one-click launchers.",
+      "stack": [
+        "PowerShell",
+        "Luau",
+        "Rojo",
+        "Rokit",
+        "StyLua",
+        "Selene",
+        "GitHub Actions"
+      ],
+      "role": "Repository owner; team workflow with Ethan and Ninety.",
+      "bullets": [
+        "Packaged reusable Roblox scaffolding with pinned tooling, format/lint/build checks, CI, team onboarding, and one-click launchers.",
+        "Added PowerShell project-generation and smoke-check scripts to make new games start from a consistent source workflow."
+      ],
+      "state": "Developer tooling used by the team’s game repositories. This is a reusable template, not a released game.",
+      "source": null,
+      "sourceVisibility": "Private",
+      "demo": null,
+      "lastActivity": "2026-10-08",
+      "recent": true,
+      "featured": false,
+      "feature": null
+    },
+    {
+      "id": "streakpet",
+      "name": "StreakPet",
+      "category": "Web app",
+      "stage": "Built",
+      "summary": "Whop community streak app with an evolving pet dragon, daily check-ins, leaderboards, reminders, and member growth entitlements.",
+      "stack": [
+        "Next.js",
+        "TypeScript",
+        "Supabase",
+        "Whop SDK",
+        "Tailwind CSS",
+        "Vercel"
+      ],
+      "role": "Repository owner; Whop app implementation.",
+      "bullets": [
+        "Built a Whop-integrated streak app with evolving pet stages, member-local daily check-ins, leaderboards, and community configuration.",
+        "Implemented reminder scheduling, growth entitlements, subscription hooks, and payment-ledger code; launch integration tasks remain."
+      ],
+      "state": "Repository launch checklist still shows payment-ledger migration, webhook setup, deployment verification, and marketplace review work. Revenue is not verified.",
+      "source": null,
+      "sourceVisibility": "Private",
+      "demo": null,
+      "lastActivity": "2026-09-30",
+      "recent": true,
+      "featured": false,
+      "feature": null
+    },
+    {
+      "id": "syfer-15-minute-btc-research",
+      "name": "SYFER 15 Minute BTC Research",
+      "category": "Research",
+      "stage": "Research",
+      "summary": "15-minute BTC prediction-market research system with data capture, paper execution, settlement analysis, and strategy diagnostics.",
+      "stack": [
+        "Python",
+        "FastAPI",
+        "SQLite",
+        "Polymarket APIs",
+        "Chainlink",
+        "Discord",
+        "[Fly.io](http://Fly.io)"
+      ],
+      "role": "Repository owner; research and trading infrastructure.",
+      "bullets": [
+        "Adapted BTC market infrastructure to 15-minute contracts with paper execution, risk controls, settlement-reference audits, and chronological strategy evaluation."
+      ],
+      "state": "Latest README identifies paper-only research. Historical live trials did not establish profitability; live mode is disabled in that documented state.",
+      "source": null,
+      "sourceVisibility": "Private",
+      "demo": null,
+      "lastActivity": "2026-09-27",
+      "recent": true,
+      "featured": false,
+      "feature": null
+    },
+    {
+      "id": "syfer-btc-dashboard-and-research",
+      "name": "SYFER BTC Dashboard and Research",
+      "category": "Research",
+      "stage": "Research",
+      "summary": "BTC prediction-market infrastructure with streaming data, strategy evaluation, execution/risk tooling, dashboard, and settlement research.",
+      "stack": [
+        "Python",
+        "FastAPI",
+        "WebSockets",
+        "SQLite",
+        "Polymarket APIs",
+        "Discord",
+        "[Fly.io](http://Fly.io)"
+      ],
+      "role": "Repository owner; research and trading infrastructure.",
+      "bullets": [
+        "Built continuously running BTC market infrastructure with WebSocket feeds, signal evaluation, persistent risk controls, a FastAPI dashboard, and Discord reporting.",
+        "Developed paper evaluation and settlement-aware bidding research with execution reconciliation and operational health checks."
+      ],
+      "state": "Earlier résumé reports live deployment; latest repository documentation describes paper mode and a new PCB research focus. No profitable live record is claimed.",
+      "source": null,
+      "sourceVisibility": "Private",
+      "demo": null,
+      "lastActivity": "2026-10-06",
+      "recent": true,
+      "featured": false,
+      "feature": null
+    },
+    {
+      "id": "syfer-weather-market-research",
+      "name": "SYFER Weather Market Research",
+      "category": "Research",
+      "stage": "Research",
+      "summary": "Temperature-market research platform with multi-venue adapters, data collection, paper broker, execution diagnostics, and dashboard.",
+      "stack": [
+        "Python",
+        "FastAPI",
+        "SQLite",
+        "NOAA",
+        "forecast APIs",
+        "Kalshi/Polymarket adapters",
+        "Oracle Cloud"
+      ],
+      "role": "Repository owner; research platform implementation.",
+      "bullets": [
+        "Built a weather-market research platform with standardized venue adapters, forecast/observation capture, and a persistent paper broker.",
+        "Added decision-to-settlement tracking, execution diagnostics, and dashboard reporting; documented the move to 24 Kalshi city series on Oracle Cloud."
+      ],
+      "state": "Latest README describes Kalshi data collection and paper operation with live trading disabled. A positive forward trading result is not established.",
+      "source": null,
+      "sourceVisibility": "Private",
+      "demo": null,
+      "lastActivity": "2026-09-28",
+      "recent": true,
+      "featured": false,
+      "feature": null
+    },
+    {
+      "id": "travel-destination-website",
+      "name": "Travel Destination Website",
+      "category": "Coursework",
+      "stage": "Coursework",
+      "summary": "Multi-page travel website with destination cards, navigation, images, and shared styling.",
+      "stack": [
+        "HTML",
+        "CSS"
+      ],
+      "role": "Individual coursework; Enrik credited in source.",
+      "bullets": [
+        "Created a multi-page travel website with linked destination pages and consistent HTML/CSS styling."
+      ],
+      "state": "2022 coursework. Repository contains source pages and assignment instructions.",
+      "source": "https://github.com/EnrikR2002/3612-assignment-1",
+      "sourceVisibility": "Public",
+      "demo": null,
+      "lastActivity": "2022-10-17",
+      "recent": false,
+      "featured": false,
+      "feature": null
+    },
+    {
+      "id": "weather-signal-discord-bot",
+      "name": "Weather Signal Discord Bot",
+      "category": "Research",
+      "stage": "Research",
+      "summary": "Early weather prediction-market signal bot with forecast ingestion, scheduled Discord cards, outcome resolution, and session reporting.",
+      "stack": [
+        "Python",
+        "aiohttp",
+        "[discord.py](http://discord.py)",
+        "APScheduler",
+        "NOAA",
+        "Open-Meteo"
+      ],
+      "role": "Repository owner; early weather research tool.",
+      "bullets": [
+        "Implemented scheduled weather signal cards by combining NOAA and Open-Meteo forecast inputs with prediction-market data and outcome reporting."
+      ],
+      "state": "Earlier, separate repository from Syfer-Weather-Bot. No proven profitability or current deployment is inferred.",
+      "source": "https://github.com/EnrikR2002/Polymarket-Weather-Bot",
+      "sourceVisibility": "Public",
+      "demo": null,
+      "lastActivity": "2026-03-12",
+      "recent": false,
+      "featured": false,
+      "feature": null
+    },
+    {
+      "id": "web-of-shadows-ds-modding-tools",
+      "name": "Web of Shadows DS Modding Tools",
+      "category": "Developer tooling",
+      "stage": "Research",
+      "summary": "Private game-modding research with extraction/rebuild tools, round-trip checks, versioned patches, and emulator playtest workflows.",
+      "stack": [
+        "Python",
+        "Nintendo DS binary/archive tooling",
+        "assembly",
+        "emulator tooling"
+      ],
+      "role": "Repository owner; tooling and reverse-engineering research.",
+      "bullets": [
+        "Developed Python tooling to extract, rebuild, and verify Nintendo DS game archives while preserving original data.",
+        "Added versioned patch workflows, assembly-based experiments, and emulator checkpoint/playtest tooling."
+      ],
+      "state": "Private research. Game ROMs, extracted commercial assets, and saves are excluded from portfolio deliverables.",
+      "source": null,
+      "sourceVisibility": "Private",
+      "demo": null,
+      "lastActivity": "2026-10-11",
+      "recent": true,
+      "featured": false,
+      "feature": null
+    },
+    {
+      "id": "workjam-to-google-calendar",
+      "name": "WorkJam to Google Calendar",
+      "category": "Automation",
+      "stage": "Built",
+      "summary": "Syncs WorkJam shifts to a dedicated Google Calendar, updating changed events and removing cancelled shifts it manages.",
+      "stack": [
+        "Python",
+        "Playwright",
+        "Google Calendar API",
+        "OAuth",
+        "Docker",
+        "n8n"
+      ],
+      "role": "Repository owner; calendar integration tool.",
+      "bullets": [
+        "Built an idempotent WorkJam-to-Google Calendar sync with OAuth, session renewal, changed/cancelled shift reconciliation, and dry-run mode.",
+        "Added container scheduling, encrypted state support, and failure notifications while preserving unrelated calendar events."
+      ],
+      "state": "Repository documents deployment paths and 30 offline reconciliation tests. Current live scheduling was not tested.",
+      "source": null,
+      "sourceVisibility": "Private",
+      "demo": null,
+      "lastActivity": "2026-08-07",
+      "recent": false,
+      "featured": false,
+      "feature": null
+    },
+    {
+      "id": "x-bookmarks-discord-digest",
+      "name": "X Bookmarks Discord Digest",
+      "category": "Automation",
+      "stage": "Built",
+      "summary": "Turns X bookmarks into categorized Discord digests and actionable follow-ups, with caching, scheduling, and per-user authentication.",
+      "stack": [
+        "TypeScript",
+        "Discord.js",
+        "Groq SDK",
+        "bird CLI",
+        "SQLite",
+        "node-cron"
+      ],
+      "role": "Repository owner; Discord bot implementation.",
+      "bullets": [
+        "Built a Discord bot that retrieves X bookmarks, enriches linked content, and generates categorized AI digests and action prompts.",
+        "Added cached analysis, scheduled digests, token usage tracking, and encrypted per-user authentication storage."
+      ],
+      "state": "Discord bot is separate from bundled reference skill material. Current deployment and external API compatibility are unverified.",
+      "source": "https://github.com/EnrikR2002/X-Bookmarks",
+      "sourceVisibility": "Public",
+      "demo": null,
+      "lastActivity": "2026-02-23",
+      "recent": false,
+      "featured": false,
+      "feature": null
+    },
+    {
+      "id": "youtube-metadata-extractor",
+      "name": "YouTube Metadata Extractor",
+      "category": "Automation",
+      "stage": "Built",
+      "summary": "Web tool extracting video metadata, thumbnails with OCR, timestamped transcripts, and spreadsheet-ready output.",
+      "stack": [
+        "Node.js",
+        "Express",
+        "YouTube Data API",
+        "YouTubei.js",
+        "Google Cloud Vision"
+      ],
+      "role": "Repository owner; metadata extraction application.",
+      "bullets": [
+        "Built an Express web tool that combines video metadata, thumbnail OCR, and timestamped transcripts into Markdown and spreadsheet-ready exports."
+      ],
+      "state": "Used as a video research utility. Current API compatibility and hosting were not exercised.",
+      "source": null,
+      "sourceVisibility": "Private",
+      "demo": null,
+      "lastActivity": "2025-10-28",
+      "recent": false,
+      "featured": false,
+      "feature": null
+    }
+  ]
+}

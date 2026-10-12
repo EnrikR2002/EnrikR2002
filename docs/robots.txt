@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://enrikr2002.github.io/EnrikR2002/sitemap.xml
