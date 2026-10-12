@@ -19,7 +19,8 @@ for(const file of files.filter(f=>f.endsWith('.html'))) {
   for(const match of source.matchAll(/(?:href|src)="([^"]+)"/g)) {
     const ref=match[1].replaceAll('&amp;','&');
     if(/^(?:https?:|mailto:|data:)/.test(ref)) continue;
-    const [relative,hash]=ref.split('#');
+    const [pathAndQuery,hash]=ref.split('#');
+    const relative=pathAndQuery.split('?')[0];
     let target=relative?path.resolve(path.dirname(file),relative):file;
     if(fs.existsSync(target)&&fs.statSync(target).isDirectory())target=path.join(target,'index.html');
     assert.ok(fs.existsSync(target),'Missing target '+ref+' in '+file);
